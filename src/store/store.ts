@@ -17,6 +17,13 @@ export const store = configureStore({
     data: persistedDataReducer,
     contacts: persistedContactReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: ['persist/PERSIST'],
+        ignoredPaths: ['persist.persistedState'],
+      },
+    }),
 });
 
 export const persistor = persistStore(store);
