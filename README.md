@@ -1,66 +1,57 @@
 # Contact Management App with Maps and Charts
 
-## Getting Started
+This project is a contact management app built with **ReactJS**, **TypeScript**, **TailwindCSS**, **React Router v6**, **ECharts**, **Redux Persist**, and **React Query (TanstackQuery)**. It includes features for managing contacts, visualizing data through charts, and displaying information on maps.
 
-### Prerequisites
+## Features
 
-Ensure you have `Node.js` and `npm` installed on your system. You can download and install them from [nodejs.org](https://nodejs.org/).
+- **Contact Management:**
+  - Add new contacts via a form.
+  - View a list of all added contacts.
+  - View details of each contact.
+  - Edit and delete contacts.
+  - Store contact data using **Redux Persist**.
 
-### Installation
+- **Dashboard:**
+  - A line graph showing **COVID-19 case fluctuations**.
+  - An interactive map with markers indicating **country-specific COVID-19 data** (active cases, recovered cases, and deaths) with popups.
 
-1. **Navigate to the Project Directory:**
+## Technologies Used
 
-    ```bash
-    cd contact-management
-    ```
+- **ReactJS & TypeScript**: For building the user interface and ensuring type safety.
+- **TailwindCSS**: For responsive and modern UI styling.
+- **React Router v6**: For client-side routing.
+- **ECharts**: For dynamic and interactive chart visualizations.
+- **Redux Persist**: For persisting and rehydrating Redux state.
+- **React Query (TanstackQuery)**: For efficient data fetching and caching.
 
-2. **Install the Necessary Dependencies:**
+## Installation
 
-    ```bash
-    npm install
-    ```
+1. Navigate to the project directory:
 
-### Running the App
+   ```bash
+   cd contact-management
+   ```
+2. Install the necessary dependencies:
 
-1. **Start the Development Server:**
+ ```
+npm install
 
-    ```bash
-    npm start
-    ```
+```
+3 Start the development server:
+```
+npm start
+```
+4.Open your browser and navigate to http://localhost:3000 to access the app.
 
-2. **Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to access the app.**
+**Code Structure**
+- src/components: Contains reusable components like ContactForm, ContactList, ContactDetails, Map, Chart, and Modal.
+- src/pages: Separate pages for Contacts, Dashboard, MapPage, and NoPageFound.
+- src/store: Redux setup for managing global state.
+- src/features: API fetching logic using React Query (contactSlice and contactApi).
+- src/routes: React Router setup for sidebar and navbar layouts.
+- src/styles: TailwindCSS and other styling files.
 
-## Deployment
-
-To deploy the app, you can use platforms such as Vercel, GitHub Pages, or Heroku. For deployment on Vercel:
-
-1. Sign up or log in to [Vercel](https://vercel.com/).
-2. Connect your GitHub repository to Vercel.
-3. Follow the instructions provided by Vercel to deploy your application.
-
-## Code Structure
-
-- **`src/components`**: Contains React components for the application.
-- **`src/styles`**: Contains TailwindCSS and other styling files.
-- **`src/utils`**: Utility functions for data processing and handling.
-- **`src/api`**: Functions for interacting with APIs.
-
-## Usage
-
-- **Map Component**: Displays contact locations on an interactive map with markers.
-- **Chart Component**: Provides data visualization through charts.
-- **Contact Management**: Interface for managing contact details with options to add, view, edit, and delete.
-
-## Comments and Documentation
-
-The codebase includes detailed comments and documentation to explain the functionality and logic of the application. Each function and component is annotated to assist with understanding and maintenance.
-
-## API Endpoint
-
-The app fetches data from the following API endpoint:
-
-- **[COVID-19 Data API](https://disease.sh/v3/covid-19/countries)**: Provides COVID-19 data for countries, including the number of cases, deaths, and recovered cases.
-
-## Contact
-
-For any questions or issues, please open an issue on the [GitHub repository](https://github.com/Lokesh777/contact-management).
+**Usage**
+- Map Component: Displays contact locations on an interactive map with markers.
+- Chart Component: Provides data visualization through charts.
+- Contact Management: Interface for managing contact details with options to add, view, edit, and delete.
