@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => {
   const chartYAxisLabel = "Count";
 
   useEffect(() => {
-    if (!data.cases || !data.deaths || !data.recovered) { 
+    if (!data) { 
       const fetchData = async () => {
         try {
           const result = await fetchGraphData();
