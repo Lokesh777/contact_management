@@ -29,6 +29,7 @@ const Map: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const [loading, setLoading] = React.useState<boolean>(true);
   const [error, setError] = React.useState<string | null>(null);
+  const validCountries = countries.filter(country => country.countryInfo.iso2);
 
   React.useEffect(() => {
     if (countries.length === 0) { 
@@ -74,9 +75,9 @@ const Map: React.FC = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
-        {countries.map(country => (
+        {validCountries.map((country, index) => (
           <Marker
-            key={country.countryInfo.iso2}
+            key={country.countryInfo.iso2 || `marker-${index}`}
             position={[country.countryInfo.lat, country.countryInfo.long]}
             icon={icon}
           >
