@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for radio buttons */
+.radio-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 2px solid #d1d5db; 
+  width: 1rem;
+  height: 1rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+}
+
+.radio-btn:checked {
+  border-color: blue; 
+}
+
+.radio-btn:checked::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: blue;
+}
